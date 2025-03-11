@@ -6,6 +6,26 @@
 body {
     min-height: 100vh;
 }
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.video-grid img {
+    width: 100%;
+    height: auto;
+}
 
 nav {
     font-family: "Times New Roman", Times, serif;

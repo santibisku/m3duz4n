@@ -16,7 +16,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 30px;
 
 }
 
@@ -86,11 +86,19 @@ footer {
     align-items: center;
     margin: 20px 0; /* Ajusta el margen superior e inferior según tus necesidades */
 }
-.redes-index {
-    display: flex;
-    justify-content: center;
 
+@media (max-width: 768px) {
+    .redes-index {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes-index a {
+        width: 100%; /* Asegura que los enlaces ocupen todo el ancho del contenedor en pantallas pequeñas */
+        max-width: none; /* Elimina el ancho máximo en pantallas pequeñas */
+    }
 }
+
 .redes {
     display: flex;
     justify-content: center;

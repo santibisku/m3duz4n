@@ -5,16 +5,22 @@
 
 body {
     min-height: 100vh;
+    background-color: red;
 }
 .image-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 100px;
 }
 
-.image-grid img {
-    width: 100%;
-    height: auto;
+.image-grid img,
+.photo-grid img,
+.gif-grid img {
+    width: 700px; /* Ajusta el tamaño según tus necesidades */
+    height: 700px; /* Ajusta el tamaño según tus necesidades */
+    object-fit: cover; /* Esto asegura que la imagen se recorte para llenar el contenedor */
+    margin: 100px; /* Espacio entre las imágenes */
+    border: 2px solid black; /* Añade un borde negro alrededor de las imágenes */
 }
 .video-grid {
     display: grid;
@@ -25,6 +31,7 @@ body {
 .video-grid img {
     width: 100%;
     height: auto;
+    margin: 5px; /* Añade margen entre los bordes de las imágenes */
 }
 
 nav {
@@ -101,7 +108,7 @@ input {
 }
 
 .navbar-dark {
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background-image: linear-gradient(to top, #434343 0%, black 100%);
 }
 
 .boton {
@@ -142,7 +149,3 @@ input {
     margin: 0 auto;
 }
 
-.username {
-    color: white;
-    margin-left: 10px;
-}

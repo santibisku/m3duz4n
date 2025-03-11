@@ -1,10 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     min-height: 100vh;
+    font-family: "Times New Roman", Times, serif;
+    background-color: white;
+}
+
+a {
+
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
 }
 
 .image-grid,
@@ -26,10 +39,11 @@ body {
     margin: 10px; /* Espacio entre las imágenes */
 }
 
-
 nav {
-    font-family: "Times New Roman", Times, serif;
+    
     font-size: larger;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100; /* Peso de la fuente Thin 100 */
 }
 
 nav li {
@@ -46,10 +60,11 @@ nav li {
 }
 
 h1, h2, h3 {
-    font-family: "Times New Roman", Times, serif;
-    color: white; /* Asegúrate de que el color sea blanco */
-    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
-    margin-bottom: 20px; /* Ajusta el margen inferior según tus necesidades */
+    color: lightgreen;
+    margin: 20px 0; /* Ajusta el margen superior e inferior según tus necesidades */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100; /* Peso de la fuente Thin 100 */
+    
 }
 
 h2, .subscripcion {
@@ -69,10 +84,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
-    margin-bottom: 20px; /* Ajusta el margen inferior según tus necesidades */
+    margin: 20px 0; /* Ajusta el margen superior e inferior según tus necesidades */
 }
+.redes-index {
+    display: flex;
+    justify-content: center;
 
+}
 .redes {
     display: flex;
     justify-content: center;
@@ -80,6 +98,7 @@ footer {
 
 .fa-brands {
     padding: 30px;
+    color: black;
 }
 
 .linea {
@@ -96,11 +115,12 @@ input {
 .navbar {
     margin-bottom: 30px;
     z-index: 1;
-    height: 100px;
+    height: 80px;
 }
 
-.navbar-dark {
-    background-image: linear-gradient(to top, white 0%, black 100%);
+.navbar-dark {  
+    background-color: black;         
+
 }
 
 .boton {
@@ -140,4 +160,3 @@ input {
     display: block;
     margin: 0 auto;
 }
-

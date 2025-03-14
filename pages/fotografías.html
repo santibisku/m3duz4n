@@ -47,7 +47,7 @@
     
     </header>
    
-    <div class="photo-grid">
+    <div class="photo-grid clickable-image">
         <img src="../images/fotografías/415494042_1829859977530184_3142861576341031399_n.jpg">
         <img src="../images/fotografías/415495044_1829859987530183_8793811491692988705_n.jpg">
         <img src="../images/fotografías/415495692_1831684520681063_8223352271038772261_n.jpg">
@@ -119,3 +119,29 @@
 </body>
 
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const containers = document.querySelectorAll('.clickable-image');
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
+    
+        const overlayImage = document.createElement('img');
+        overlay.appendChild(overlayImage);
+    
+        containers.forEach(container => {
+            const images = container.querySelectorAll('img');
+            images.forEach(image => {
+                image.addEventListener('click', function() {
+                    overlayImage.src = image.src;
+                    overlay.style.display = 'flex';
+                });
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    </script>

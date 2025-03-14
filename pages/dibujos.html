@@ -43,7 +43,7 @@
             </nav>
     </header>
 
-    <div class="image-grid">
+    <div class="image-grid clickable-image">
         <img src="../images/dibujos/399645861_1800172767165572_3889173768386037001_n.jpg" alt="">
         <img src="../images/dibujos/400778293_1798140570702125_8066058416282438302_n.jpg" alt="">
         <img src="../images/dibujos/401422237_1810263979489784_8119847308689760922_n.jpg" alt="">
@@ -152,3 +152,29 @@
 </body>
 
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const containers = document.querySelectorAll('.clickable-image');
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
+    
+        const overlayImage = document.createElement('img');
+        overlay.appendChild(overlayImage);
+    
+        containers.forEach(container => {
+            const images = container.querySelectorAll('img');
+            images.forEach(image => {
+                image.addEventListener('click', function() {
+                    overlayImage.src = image.src;
+                    overlay.style.display = 'flex';
+                });
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    </script>

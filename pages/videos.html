@@ -43,7 +43,7 @@
         </nav>
     </header>
 
-    <div class="gif-grid">
+    <div class="gif-grid clickable-image"       >
         <img src="../images/videos/AQM4rSA0UqTZIZQ6hrx7l0po0Vd9ixRk9sTffAVasBMrbkNEIfnBrZyYMew6htXLsNt4RDqRUzsg9GdgX9RN0m2m_18059485516833411.gif" alt="GIF 1">
         <img src="../images/videos/AQNBpO38zFyApPZaJPziBh40wIIfgFFO5nfHi64WRPMPVD527CJOtqfV_EiwTR3Sw2p2HyP8UqI3CfCSDHAfytnoHNlGsRk2uXY0_17843390151421202.gif" alt="GIF 2">
         <img src="../images/videos/AQNdwv0OLAqaDtsvOTmPQ9SDP1TIAaWoftFEr6gkGun2i4RwmJKiUPcSS984vmkX5s81HBDXwqF3LgKMg6Bl5hc_18028501091608663.gif" alt="GIF 3">
@@ -99,3 +99,29 @@
 </body>
 
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const containers = document.querySelectorAll('.clickable-image');
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
+    
+        const overlayImage = document.createElement('img');
+        overlay.appendChild(overlayImage);
+    
+        containers.forEach(container => {
+            const images = container.querySelectorAll('img');
+            images.forEach(image => {
+                image.addEventListener('click', function() {
+                    overlayImage.src = image.src;
+                    overlay.style.display = 'flex';
+                });
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    </script>

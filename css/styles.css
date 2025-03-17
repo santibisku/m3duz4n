@@ -7,7 +7,7 @@
 body {
     min-height: 100vh;
     font-family: "Times New Roman", Times, serif;
-    background-color: white;
+    background-color: lightgreen;
 }
 
 a {
@@ -34,6 +34,7 @@ a {
 .gif-grid img {
     width: 300px; /* Ajusta el tamaño para que quepan 4 en una fila */
     height: 300px;
+    object-fit: cover; /* Recorta la imagen para que mantenga su proporción */
     border: 2px solid black; /* Añade un borde negro alrededor de las imágenes */
     margin: 10px; /* Espacio entre las imágenes */
     transition: transform 0.3s ease; /* Añade una transición suave */
@@ -185,6 +186,25 @@ input {
 .overlay img {
     max-width: 90%;
     max-height: 90%;
+}
+
+.overlay .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.overlay .nav-button.prev {
+    left: 10px;
+}
+
+.overlay .nav-button.next {
+    right: 10px;
 }
 
 .clickable-image img {
